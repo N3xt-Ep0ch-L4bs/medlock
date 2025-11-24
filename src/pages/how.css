@@ -1,0 +1,181 @@
+.how-page {
+  background: #FFFFFF;
+  padding: 60px 10%;
+  font-family: "Figtree", sans-serif;
+  color: #1a1a1a;
+}
+
+/* Intro */
+.how-intro {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.how-intro h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #222;
+}
+
+.how-intro h2 span {
+  color: #0066ff;
+}
+
+.how-intro p {
+  color: #555;
+  margin-top: 10px;
+  font-size: 1rem;
+}
+
+/* Steps */
+.how-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  margin-bottom: 70px;
+}
+
+.step-card {
+  display: flex;
+  align-items: flex-start;
+  background: #ffffff;
+  border: 1px solid #e0ecff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+  gap: 20px;
+}
+
+.step-icon {
+  color: #0066ff;
+  padding-top: 7%;
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+}
+
+.step-card h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #222;
+}
+
+.step-card p {
+  color: #555;
+  line-height: 1.6;
+}
+
+
+
+/* Benefits */
+.benefits {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.benefits h3 {
+  font-size: 1.6rem;
+  color: #222;
+  margin-bottom: 30px;
+}
+
+.benefit-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.benefit-card {
+  background: #ffffff;
+  border-radius: 14px;
+  border: 1px solid #e0ecff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+  padding: 25px;
+  flex: 1;
+  min-width: 260px;
+  max-width: 320px;
+}
+
+.benefit-card h4 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.benefit-card p {
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .how-page {
+    padding: 40px 6%;
+  }
+
+  .step-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .step-icon {
+    margin-bottom: 10px;
+  }
+}
+
+.tech-section h3 {
+  font-size: 1.8rem;
+}
+
+.tech-card {
+  background: #ffffff;
+  border-radius: 12px;
+  border: 1px solid #e0ecff;
+  text-align: left;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 20px;
+}
+
+.tech-card:hover {
+  border-color: #b6d4ff;
+}
+
+.tech-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 25px;
+}
+
+.tech-header h4 {
+  color: #0066ff;
+  font-size: 1.05rem;
+  margin: 0;
+  flex: 1;
+}
+
+.chevron {
+  color: #0066ff;
+  transition: transform 0.3s ease;
+}
+
+.tech-card.open .chevron {
+  transform: rotate(180deg);
+}
+
+.tech-content {
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+  padding: 0 25px;
+}
+
+.tech-content p {
+  margin: 0;
+  padding-bottom: 20px;
+  color: #555;
+  line-height: 1.6;
+}

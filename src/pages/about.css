@@ -1,0 +1,123 @@
+.about-page {
+  background: linear-gradient(to bottom, #f7fbff, #eef6ff);
+  padding: 60px 10%;
+  color: #1b1b1b;
+  font-family: "Figtree", sans-serif;
+}
+
+/* Intro Section */
+.about-intro {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.about-intro h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #222;
+}
+
+.about-intro h2 span {
+  color: #0066ff;
+}
+
+.about-intro p {
+  font-size: 1rem;
+  margin-top: 8px;
+  color: #555;
+}
+
+.about-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  margin-top: 50px;
+  flex-wrap: wrap;
+}
+
+.about-text {
+  flex: 1;
+  text-align: left;
+  line-height: 1.7;
+  color: #444;
+}
+
+.about-image {
+  flex: 1;
+  width: 400px;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+}
+
+.about-image img {
+  max-width: 100%;
+  border-radius: 16px;
+}
+
+/* Mission & Vision */
+.mission-vision {
+  border-radius: 16px;
+  padding: 40px;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.mv-cards {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.mv-card {
+  background: #f9fcff;
+  padding: 25px;
+  border-radius: 12px;
+  flex: 1;
+  min-width: 260px;
+  max-width: 400px;
+  border: 1px solid #e0ecff;
+}
+
+.mv-card h4 {
+  color: #0066ff;
+  margin-bottom: 10px;
+}
+
+/* Difference Section */
+.difference {
+  text-align: center;
+}
+
+.diff-cards {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.diff-card {
+  background: #ffffff;
+  padding: 30px 20px;
+  border-radius: 14px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  flex: 1;
+  min-width: 260px;
+  max-width: 400px;
+}
+
+.icon {
+  font-size: 2rem;
+  color: #0066ff;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.diff-card h4 {
+  color: #0066ff;
+  margin-bottom: 10px;
+}

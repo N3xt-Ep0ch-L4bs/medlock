@@ -1,0 +1,567 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1px 32px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.logo p {
+ font-weight: bold;
+ font-size: 1.2rem;
+}
+
+.nav-links a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #616161;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #1E88E5;
+}
+
+.started-btn {
+  background: linear-gradient(96.56deg, #1E88E5 -34.23%, #42A5F5 108.4%);
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  margin-left: 16px;
+}
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(17, 24, 39, 0.55);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.share-modal {
+  background: #fff;
+  border-radius: 16px;
+  padding: 1.5rem 1.8rem;
+  width: 90%;
+  max-width: 580px;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+  animation: popIn 0.3s ease;
+  position: relative;
+  overflow-y: auto;
+  max-height: 90vh;
+}
+
+.close-btn {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  background: none;
+  border: none;
+  font-size: 1.6rem;
+  cursor: pointer;
+  color: #6b7280;
+}
+
+.step-text {
+  color: #6b7280;
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+}
+
+.search-section input {
+  width: 90%;
+  padding: 10px 14px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+}
+
+.provider-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.provider-card {
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.2s ease;
+}
+
+.provider-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.provider-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #e5e7eb;
+}
+
+.provider-avatar-large {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  padding-right: 10px;
+}
+
+
+.provider-card:hover {
+  border-color: #3b82f6;
+}
+
+.provider-card.selected {
+  border-color: #2563eb;
+  background: #eff6ff;
+}
+
+.selected-provider {
+  border: 1px solid #a7f3d0;
+  background: #ecfdf5;
+  padding: 1rem;
+  display: flex;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.selected-provider h4 {
+  font-size: 1rem;
+}
+
+.selected-provider p {
+  font-size: 0.8rem;
+}
+
+.select-btn {
+  background: #2563eb;
+  color: white;
+  padding: 6px 14px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+.selected-doctor {
+  border: 1px solid #a7f3d0;
+  background: #ecfdf5;
+  padding: 1rem;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.change-btn {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  background: none;
+  border: none;
+  color: #2563eb;
+  cursor: pointer;
+}
+
+.recommend-box {
+  background: #fff7ed;
+  border: 1px solid #fcd34d;
+  border-radius: 10px;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.recommmend-heading h4 {
+  font-size: 1rem;
+}
+
+.recommmend-heading p {
+  font-size: 0.8rem;
+}
+
+.recommend-list button {
+  background: #fef3c7;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 10px;
+  margin-top: 8px;
+  margin-right: 6px;
+  cursor: pointer;
+}
+
+.share-records-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.8rem;
+}
+
+.share-record-card {
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.share-record-card p{
+  font-size: 0.8rem;
+}
+
+.share-record-card.checked {
+  border-color: #3b82f6;
+  background: #eff6ff;
+}
+
+.modal-footer {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.next-btn {
+  background: #16a34a;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 18px;
+  cursor: pointer;
+}
+
+.back-btn {
+  background: #e5e7eb;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 18px;
+  cursor: pointer;
+}
+
+@keyframes popIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* === STEP 3: Access Duration === */
+.access-duration {
+  text-align: left;
+  margin-top: 20px;
+}
+
+.access-duration h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 8px;
+}
+
+.access-duration p {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 18px;
+}
+
+.duration-options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.duration-btn {
+  padding: 10px 18px;
+  border: 1.5px solid #ccc;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  color: #333;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+}
+
+.duration-btn:hover {
+  background-color: #f1fff8;
+  border-color: #0e9e6e;
+}
+
+.duration-btn.selected {
+  background-color: #0e9e6e;
+  color: #fff;
+  border-color: #0e9e6e;
+  font-weight: 500;
+}
+
+/* Custom Date Picker Styling */
+.expiry-input {
+  margin-top: 20px;
+  background: #fafafa;
+  padding: 15px;
+  border-radius: 10px;
+  border: 1px solid #e3e3e3;
+}
+
+.expiry-input p {
+  font-size: 0.9rem;
+  color: #444;
+  margin-bottom: 8px;
+}
+
+.datepicker-input {
+  width: 100%;
+  padding: 10px 14px;
+  font-size: 0.95rem;
+  border: 1.5px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+}
+
+.datepicker-input:focus {
+  border-color: #0e9e6e;
+}
+
+/* Override react-datepicker default look */
+.react-datepicker {
+  border-radius: 12px !important;
+  border: 1px solid #ddd !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.react-datepicker__header {
+  background-color: #0e9e6e !important;
+  color: white !important;
+  border-bottom: none !important;
+}
+
+.react-datepicker__day--selected,
+.react-datepicker__day--keyboard-selected {
+  background-color: #0e9e6e !important;
+  color: #fff !important;
+  border-radius: 50% !important;
+}
+
+.react-datepicker__time-container {
+  border-left: 1px solid #eee !important;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25px;
+}
+
+.review-confirm h3 {
+  margin-bottom: 6px;
+  font-size: 1.4rem;
+}
+
+.review-subtext {
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.review-summary {
+  background: #f9fafb;
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.review-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.review-label {
+  flex: 0.9;
+  color: #555;
+  font-weight: 500;
+}
+
+.review-content {
+  flex: 2;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #333;
+}
+
+.review-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.doctor-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.edit-link,
+.add-link,
+.view-link {
+  color: #007aff;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.add-link {
+  color: #00b14f;
+}
+
+.review-content .muted {
+  color: #999;
+}
+
+.review-row:last-child {
+  border-bottom: none;
+}
+
+/* === SUCCESS CONFIRMATION (STEP 5) === */
+.success-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 2rem;
+  text-align: center;
+  animation: fadeInUp 0.6s ease both;
+}
+
+/* Success icon styling */
+.success-icon {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  animation: popIn 0.5s ease forwards;
+}
+
+.success-icon img {
+  width: 150px;
+  height: 150px;
+}
+
+/* Heading and text */
+.success-container h2 {
+  color: #222;
+  font-size: 1.6rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.success-container p {
+  color: #555;
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+
+/* Details box */
+.success-details {
+  background: #f9f9f9;
+  border-radius: 12px;
+  padding: 1rem 1.5rem;
+  text-align: left;
+  margin: 1rem 0 1.5rem;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.success-details p {
+  font-size: 0.9rem;
+  margin: 0.4rem 0;
+  color: #444;
+}
+
+.success-details strong {
+  color: #111;
+}
+
+/* Email info */
+.success-email {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+.success-email span {
+  display: block;
+  font-size: 0.85rem;
+  color: #333;
+  margin-top: 0.2rem;
+}
+
+/* Done button */
+.next-btn {
+  background: linear-gradient(135deg, #00c853, #43a047);
+  border: none;
+  color: white;
+  padding: 0.8rem 2rem;
+  font-weight: 600;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 10px rgba(0, 200, 83, 0.25);
+}
+
+.next-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0, 200, 83, 0.35);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes popIn {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  80% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
