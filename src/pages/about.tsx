@@ -1,5 +1,5 @@
 import React from "react";
-import "./About.css";
+import "./about.css";
 import NavBar from "../components/navbar";
 import aboutImg from "../assets/div1.png";
 const About = () => {

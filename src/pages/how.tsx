@@ -4,7 +4,7 @@ import FraudIcon from "../assets/fraud.png";
 import PrivacyIcon from "../assets/privacy.png";
 import TransferIcon from "../assets/transfer.png";
 import UserVerified from "../assets/userverified.png";
-import "./How.css";
+import "./how.css";
 import {
   Upload,
   Share2,
